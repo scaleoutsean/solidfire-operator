@@ -49,7 +49,9 @@ solidfire-operator-controller-manager-85964766c-ncll2   2/2     Running   0     
 
 Edit the YAML sample file from `config/samples` and give it a try.
 
-```dotnetcli
+**WARNING:** solidfire-operator v0.0.4 does not (yet) store SolidFire cluster administrator password in Kubernetes secrets. If you hard-code that password in YAML, make sure the file cannot be accessed by other users.
+
+```sh
 vim config/samples/solidfire_v1alpha1_qospolicy.yaml
 kubectl apply -f solidfire-operator/config/samples/solidfire_v1alpha1_qospolicy.yaml
 ```
