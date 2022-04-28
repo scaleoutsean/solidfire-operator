@@ -110,7 +110,7 @@ Thanks to @vrd83 for the inspiration to give this idea a try.
 
 ## Example
 
-This is an example of an edited config/samples/solidfire_v1alpha1_qospolicy.yaml with the password string replaced by asterisks. `status: present` is default so there's no need to have it in there in order to create a SolidFire QoS Policy. 
+This is an example of an edited config/samples/solidfire_v1alpha1_qospolicy.yaml with the password string replaced by asterisks. `status: present` is on by default so there's no need to have it in there in order to create (or delete) a SolidFire QoS Policy. 
 
 (The FQDN in apiVersion value is arbitrary; solidfire-operator doesn't "ping" the FQDN or send any info. Check Operator Framework's Privacy Policy to see if they do any data collection.)
 
