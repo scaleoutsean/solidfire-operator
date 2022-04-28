@@ -1,0 +1,11 @@
+---
+# Use the 'create api' subcommand to add watches to this file.
+- version: v1alpha1
+  group: solidfire.datafabric.club
+  kind: QosPolicy
+  playbook: playbooks/qospolicy.yml
+  finalizer:
+    name: solidfire.datafabric.club/finalizer
+    vars:
+      state: absent
+#+kubebuilder:scaffold:watch

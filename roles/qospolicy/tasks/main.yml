@@ -1,0 +1,14 @@
+---
+- name: Show env values 
+  ansible.builtin.debug:
+    msg: "User: {{ lookup('env', 'PATH')  }}"
+
+- name: QoS Policy Create, Edit, Delete Task
+  netapp.elementsw.na_elementsw_qos_policy:
+    hostname: "{{ hostname }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    name: "{{ name }}"
+    qos: { minIOPS: "{{ qos.min }}", maxIOPS: "{{ qos.max }}", burstIOPS: "{{ qos.burst }}" }
+    # state: "{{ state }}"
+  ignore_errors: true

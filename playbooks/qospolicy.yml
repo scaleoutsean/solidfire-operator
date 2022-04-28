@@ -1,0 +1,12 @@
+---
+- hosts: localhost 
+  connection: local
+  gather_facts: no
+  collections:
+    - netapp.elementsw
+    - ansible.builtin
+    - kubernetes.core
+    - operator_sdk.util
+  tasks:
+    - import_role:
+        name: "../roles/qospolicy"

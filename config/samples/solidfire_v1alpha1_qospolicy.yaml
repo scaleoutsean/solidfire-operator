@@ -1,0 +1,14 @@
+apiVersion: solidfire.datafabric.club/v1alpha1
+kind: QosPolicy
+metadata:
+  name: qospolicy-sample
+spec:
+  hostname: "192.168.1.30"
+  username: "admin"
+  password: "*****"
+  name: "sample"
+  qos:
+    min: 111
+    max: 222
+    burst: 333
+

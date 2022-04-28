@@ -1,0 +1,20 @@
+# permissions for end users to view qospolicies.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: qospolicy-viewer-role
+rules:
+- apiGroups:
+  - solidfire.datafabric.club
+  resources:
+  - qospolicies
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - solidfire.datafabric.club
+  resources:
+  - qospolicies/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit qospolicies.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: qospolicy-editor-role
+rules:
+- apiGroups:
+  - solidfire.datafabric.club
+  resources:
+  - qospolicies
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - solidfire.datafabric.club
+  resources:
+  - qospolicies/status
+  verbs:
+  - get
